@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { faSkull } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // styles
 const pageStyles = {
@@ -29,21 +31,13 @@ const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
+      <h1 style={headingStyles}>Uh oh &nbsp; <FontAwesomeIcon icon={faSkull} size='2x' /></h1>
       <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
+        Whoops it looks like that page doesn't exist.{" "}
+        <span role="img" aria-label="Awkward emoji">
+          😬
         </span>{" "}
-        we couldn’t find what you were looking for.
         <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
         <br />
         <Link to="/">Go home</Link>.
       </p>
