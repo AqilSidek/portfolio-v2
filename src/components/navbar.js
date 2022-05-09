@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { container, navelems } from './navbar.module.css'
 import { linktext } from './main.module.css'
 import styled, { createGlobalStyle } from 'styled-components'
-import logo from '../images/aq.png'
+import logo from '../images/aq.PNG'
 
 const Global = createGlobalStyle`
     body, html {
